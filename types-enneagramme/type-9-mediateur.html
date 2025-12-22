@@ -63,104 +63,46 @@
     <p class="lead">L'harmonie et la paix</p>
   </div>
 
-  <!-- Livre interactif -->
+  <!-- Fiche Type visuelle -->
   <section>
-    <div class="book-container">
-      <div class="book center-action">
-        <div class="book-pages pages-1-2">
-          <div class="book-page page-left">
-            <div class="fiche-type-header">
-              <span class="fiche-type-number">9</span>
-              <div class="fiche-type-title">
-                <h2>Le Médiateur</h2>
-                <div class="fiche-type-keywords">
-                  <span>conciliant</span>
-                  <span>•</span>
-                  <span>patient</span>
-                  <span>•</span>
-                  <span>diplomate</span>
-                </div>
-              </div>
+    <div class="fiche-type center-action">
+      <div class="fiche-type-left">
+        <div class="fiche-type-header">
+          <span class="fiche-type-number">9</span>
+          <div class="fiche-type-title">
+            <h2>Le Médiateur</h2>
+            <div class="fiche-type-keywords">
+              <span>conciliant</span>
+              <span>•</span>
+              <span>patient</span>
+              <span>•</span>
+              <span>diplomate</span>
             </div>
-            <div class="fiche-type-center">Plutôt géré par les actions / colère</div>
-            <div class="fiche-type-traits">
-              <ul>
-                <li>Harmonie</li>
-                <li>Diplomatie</li>
-                <li>Souplesse</li>
-              </ul>
-            </div>
-            <div class="fiche-type-baseline">« L'harmonie et la paix »</div>
-            <div class="page-number">1</div>
-          </div>
-          <div class="book-page page-right">
-            <div class="fiche-type-illustration">
-              <img src="../images/Type-9-lelephant.png" alt="L'éléphant">
-            </div>
-            <div class="animal-name">L'Éléphant</div>
-            <div class="page-number">2</div>
           </div>
         </div>
 
-        <div class="book-pages pages-3-4">
-          <div class="book-page page-left">
-            <h3>Forces et qualités</h3>
-            <ul class="qualities-list">
-              <li><strong>Diplomatie</strong> - Talent naturel pour résoudre les conflits</li>
-              <li><strong>Écoute</strong> - Comprend tous les points de vue</li>
-              <li><strong>Stabilité</strong> - Présence rassurante et apaisante</li>
-              <li><strong>Patience</strong> - Ne se laisse pas emporter par l'urgence</li>
-            </ul>
-            <h3>Défis à surmonter</h3>
-            <ul class="challenges-list">
-              <li>Affirmer ses propres opinions et besoins</li>
-              <li>Passer à l'action sans attendre</li>
-              <li>Reconnaître et exprimer sa colère</li>
-            </ul>
-            <div class="page-number">3</div>
-          </div>
-          <div class="book-page page-right">
-            <h3>Conseil de développement</h3>
-            <blockquote class="book-quote">
-              « Vous êtes important. Votre voix compte. Vos opinions méritent d'être entendues. »
-              <cite>— Anonyme</cite>
-            </blockquote>
-            <h3>En relation avec les autres</h3>
-            <p>Le Médiateur gagne à prendre position. En osant exprimer ses préférences, il devient un leader plus inspirant et authentique.</p>
-            <h3>Chemin d'évolution</h3>
-            <p>Vers le <strong>Type 3</strong> : action et affirmation de soi. Intégrer les qualités du <strong>Type 6</strong> : engagement et prise de position.</p>
-            <div class="page-number">4</div>
-          </div>
+        <div class="fiche-type-center">
+          Plutôt géré par les actions / colère
         </div>
 
-        <div class="book-page-turn">
-          <div class="page-turn-front">
-            <div class="fiche-type-illustration"><img src="../images/Type-9-lelephant.png" alt="L'éléphant"></div>
-            <div class="animal-name">L'Éléphant</div>
-            <div class="page-hint">Cliquez pour tourner la page</div>
-          </div>
-          <div class="page-turn-back">
-            <h3>Forces et qualités</h3>
-            <ul class="qualities-list">
-              <li><strong>Diplomatie</strong> - Talent naturel pour résoudre les conflits</li>
-              <li><strong>Écoute</strong> - Comprend tous les points de vue</li>
-              <li><strong>Stabilité</strong> - Présence rassurante et apaisante</li>
-              <li><strong>Patience</strong> - Ne se laisse pas emporter par l'urgence</li>
-            </ul>
-            <h3>Défis à surmonter</h3>
-            <ul class="challenges-list">
-              <li>Affirmer ses propres opinions et besoins</li>
-              <li>Passer à l'action sans attendre</li>
-              <li>Reconnaître et exprimer sa colère</li>
-            </ul>
-            <div class="page-hint">Cliquez pour revenir</div>
-          </div>
+        <div class="fiche-type-traits">
+          <ul>
+            <li>Harmonie</li>
+            <li>Diplomatie</li>
+            <li>Souplesse</li>
+          </ul>
+        </div>
+
+        <div class="fiche-type-baseline">
+          « L'harmonie et la paix »
         </div>
       </div>
-      <div class="book-nav">
-        <button class="book-nav-btn prev" onclick="turnPage('prev')" disabled>← Pages 1-2</button>
-        <span class="book-nav-indicator">Pages <span id="current-pages">1-2</span></span>
-        <button class="book-nav-btn next" onclick="turnPage('next')">Pages 3-4 →</button>
+
+      <div class="fiche-type-right">
+        <div class="fiche-type-illustration">
+          <img src="../images/Type-9-lelephant.png" alt="L'Éléphant">
+        </div>
+        <p class="animal-name">L'Éléphant</p>
       </div>
     </div>
   </section>
@@ -231,22 +173,9 @@
 </footer>
 
 <script>
-function toggleMenu() { document.getElementById('main-nav').classList.toggle('active'); }
-let currentPage = 1;
-const book = document.querySelector('.book');
-const pageTurn = document.querySelector('.book-page-turn');
-const prevBtn = document.querySelector('.book-nav-btn.prev');
-const nextBtn = document.querySelector('.book-nav-btn.next');
-const pageIndicator = document.getElementById('current-pages');
-function turnPage(direction) {
-  if (direction === 'next' && currentPage === 1) { book.classList.add('turned'); currentPage = 3; updateNavigation(); }
-  else if (direction === 'prev' && currentPage === 3) { book.classList.remove('turned'); currentPage = 1; updateNavigation(); }
+function toggleMenu() {
+  document.getElementById('main-nav').classList.toggle('active');
 }
-function updateNavigation() {
-  if (currentPage === 1) { prevBtn.disabled = true; nextBtn.disabled = false; pageIndicator.textContent = '1-2'; }
-  else { prevBtn.disabled = false; nextBtn.disabled = true; pageIndicator.textContent = '3-4'; }
-}
-pageTurn.addEventListener('click', function() { if (currentPage === 1) { turnPage('next'); } else { turnPage('prev'); } });
 </script>
 </body>
 </html>

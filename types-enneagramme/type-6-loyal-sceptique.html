@@ -63,104 +63,46 @@
     <p class="lead">La loyauté et la vigilance</p>
   </div>
 
-  <!-- Livre interactif -->
+  <!-- Fiche Type visuelle -->
   <section>
-    <div class="book-container">
-      <div class="book center-mental">
-        <div class="book-pages pages-1-2">
-          <div class="book-page page-left">
-            <div class="fiche-type-header">
-              <span class="fiche-type-number">6</span>
-              <div class="fiche-type-title">
-                <h2>Le Loyal-Sceptique</h2>
-                <div class="fiche-type-keywords">
-                  <span>loyal</span>
-                  <span>•</span>
-                  <span>vigilant</span>
-                  <span>•</span>
-                  <span>fiable</span>
-                </div>
-              </div>
+    <div class="fiche-type center-mental">
+      <div class="fiche-type-left">
+        <div class="fiche-type-header">
+          <span class="fiche-type-number">6</span>
+          <div class="fiche-type-title">
+            <h2>Le Loyal-Sceptique</h2>
+            <div class="fiche-type-keywords">
+              <span>loyal</span>
+              <span>•</span>
+              <span>vigilant</span>
+              <span>•</span>
+              <span>fiable</span>
             </div>
-            <div class="fiche-type-center">Plutôt géré par la mentalisation / peur</div>
-            <div class="fiche-type-traits">
-              <ul>
-                <li>Loyauté</li>
-                <li>Vigilance</li>
-                <li>Fiabilité</li>
-              </ul>
-            </div>
-            <div class="fiche-type-baseline">« La loyauté et la vigilance »</div>
-            <div class="page-number">1</div>
-          </div>
-          <div class="book-page page-right">
-            <div class="fiche-type-illustration">
-              <img src="../images/Type-6-le-kangourou.png" alt="Le kangourou">
-            </div>
-            <div class="animal-name">Le Kangourou</div>
-            <div class="page-number">2</div>
           </div>
         </div>
 
-        <div class="book-pages pages-3-4">
-          <div class="book-page page-left">
-            <h3>Forces et qualités</h3>
-            <ul class="qualities-list">
-              <li><strong>Loyauté</strong> - Fidélité indéfectible envers ses proches</li>
-              <li><strong>Prévoyance</strong> - Anticipe les problèmes avant qu'ils n'arrivent</li>
-              <li><strong>Fiabilité</strong> - Tient ses engagements coûte que coûte</li>
-              <li><strong>Courage</strong> - Affronte ses peurs quand c'est nécessaire</li>
-            </ul>
-            <h3>Défis à surmonter</h3>
-            <ul class="challenges-list">
-              <li>Faire confiance à son propre jugement</li>
-              <li>Transformer le doute en discernement</li>
-              <li>Agir malgré l'incertitude</li>
-            </ul>
-            <div class="page-number">3</div>
-          </div>
-          <div class="book-page page-right">
-            <h3>Conseil de développement</h3>
-            <blockquote class="book-quote">
-              « Le courage n'est pas l'absence de peur, mais la capacité d'agir malgré elle. »
-              <cite>— Nelson Mandela</cite>
-            </blockquote>
-            <h3>En relation avec les autres</h3>
-            <p>Le Loyal-Sceptique gagne à développer la confiance en soi. En s'appuyant sur sa propre autorité intérieure, il devient un pilier pour les autres.</p>
-            <h3>Chemin d'évolution</h3>
-            <p>Vers le <strong>Type 9</strong> : sérénité et confiance. Intégrer les qualités du <strong>Type 3</strong> : confiance en soi et action.</p>
-            <div class="page-number">4</div>
-          </div>
+        <div class="fiche-type-center">
+          Plutôt géré par la mentalisation / peur
         </div>
 
-        <div class="book-page-turn">
-          <div class="page-turn-front">
-            <div class="fiche-type-illustration"><img src="../images/Type-6-le-kangourou.png" alt="Le kangourou"></div>
-            <div class="animal-name">Le Kangourou</div>
-            <div class="page-hint">Cliquez pour tourner la page</div>
-          </div>
-          <div class="page-turn-back">
-            <h3>Forces et qualités</h3>
-            <ul class="qualities-list">
-              <li><strong>Loyauté</strong> - Fidélité indéfectible envers ses proches</li>
-              <li><strong>Prévoyance</strong> - Anticipe les problèmes avant qu'ils n'arrivent</li>
-              <li><strong>Fiabilité</strong> - Tient ses engagements coûte que coûte</li>
-              <li><strong>Courage</strong> - Affronte ses peurs quand c'est nécessaire</li>
-            </ul>
-            <h3>Défis à surmonter</h3>
-            <ul class="challenges-list">
-              <li>Faire confiance à son propre jugement</li>
-              <li>Transformer le doute en discernement</li>
-              <li>Agir malgré l'incertitude</li>
-            </ul>
-            <div class="page-hint">Cliquez pour revenir</div>
-          </div>
+        <div class="fiche-type-traits">
+          <ul>
+            <li>Loyauté</li>
+            <li>Vigilance</li>
+            <li>Fiabilité</li>
+          </ul>
+        </div>
+
+        <div class="fiche-type-baseline">
+          « La loyauté et la vigilance »
         </div>
       </div>
-      <div class="book-nav">
-        <button class="book-nav-btn prev" onclick="turnPage('prev')" disabled>← Pages 1-2</button>
-        <span class="book-nav-indicator">Pages <span id="current-pages">1-2</span></span>
-        <button class="book-nav-btn next" onclick="turnPage('next')">Pages 3-4 →</button>
+
+      <div class="fiche-type-right">
+        <div class="fiche-type-illustration">
+          <img src="../images/Type-6-le-kangourou.png" alt="Le Kangourou">
+        </div>
+        <p class="animal-name">Le Kangourou</p>
       </div>
     </div>
   </section>
@@ -231,22 +173,9 @@
 </footer>
 
 <script>
-function toggleMenu() { document.getElementById('main-nav').classList.toggle('active'); }
-let currentPage = 1;
-const book = document.querySelector('.book');
-const pageTurn = document.querySelector('.book-page-turn');
-const prevBtn = document.querySelector('.book-nav-btn.prev');
-const nextBtn = document.querySelector('.book-nav-btn.next');
-const pageIndicator = document.getElementById('current-pages');
-function turnPage(direction) {
-  if (direction === 'next' && currentPage === 1) { book.classList.add('turned'); currentPage = 3; updateNavigation(); }
-  else if (direction === 'prev' && currentPage === 3) { book.classList.remove('turned'); currentPage = 1; updateNavigation(); }
+function toggleMenu() {
+  document.getElementById('main-nav').classList.toggle('active');
 }
-function updateNavigation() {
-  if (currentPage === 1) { prevBtn.disabled = true; nextBtn.disabled = false; pageIndicator.textContent = '1-2'; }
-  else { prevBtn.disabled = false; nextBtn.disabled = true; pageIndicator.textContent = '3-4'; }
-}
-pageTurn.addEventListener('click', function() { if (currentPage === 1) { turnPage('next'); } else { turnPage('prev'); } });
 </script>
 </body>
 </html>

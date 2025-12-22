@@ -63,104 +63,46 @@
     <p class="lead">Le pouvoir et la protection</p>
   </div>
 
-  <!-- Livre interactif -->
+  <!-- Fiche Type visuelle -->
   <section>
-    <div class="book-container">
-      <div class="book center-action">
-        <div class="book-pages pages-1-2">
-          <div class="book-page page-left">
-            <div class="fiche-type-header">
-              <span class="fiche-type-number">8</span>
-              <div class="fiche-type-title">
-                <h2>Le Chef-puissant</h2>
-                <div class="fiche-type-keywords">
-                  <span>puissant</span>
-                  <span>•</span>
-                  <span>protecteur</span>
-                  <span>•</span>
-                  <span>direct</span>
-                </div>
-              </div>
+    <div class="fiche-type center-action">
+      <div class="fiche-type-left">
+        <div class="fiche-type-header">
+          <span class="fiche-type-number">8</span>
+          <div class="fiche-type-title">
+            <h2>Le Chef-puissant</h2>
+            <div class="fiche-type-keywords">
+              <span>puissant</span>
+              <span>•</span>
+              <span>protecteur</span>
+              <span>•</span>
+              <span>direct</span>
             </div>
-            <div class="fiche-type-center">Plutôt géré par les actions / colère</div>
-            <div class="fiche-type-traits">
-              <ul>
-                <li>Leadership</li>
-                <li>Protection</li>
-                <li>Confiance</li>
-              </ul>
-            </div>
-            <div class="fiche-type-baseline">« Le pouvoir et la protection »</div>
-            <div class="page-number">1</div>
-          </div>
-          <div class="book-page page-right">
-            <div class="fiche-type-illustration">
-              <img src="../images/Type-8-le-lion.png" alt="Le lion">
-            </div>
-            <div class="animal-name">Le Lion</div>
-            <div class="page-number">2</div>
           </div>
         </div>
 
-        <div class="book-pages pages-3-4">
-          <div class="book-page page-left">
-            <h3>Forces et qualités</h3>
-            <ul class="qualities-list">
-              <li><strong>Leadership</strong> - Capacité naturelle à diriger et inspirer</li>
-              <li><strong>Protection</strong> - Défend les personnes vulnérables avec force</li>
-              <li><strong>Franchise</strong> - Dit les choses comme elles sont</li>
-              <li><strong>Détermination</strong> - Ne recule devant rien pour atteindre ses buts</li>
-            </ul>
-            <h3>Défis à surmonter</h3>
-            <ul class="challenges-list">
-              <li>Montrer sa vulnérabilité et sa tendresse</li>
-              <li>Modérer l'intensité de ses réactions</li>
-              <li>Laisser les autres prendre les commandes</li>
-            </ul>
-            <div class="page-number">3</div>
-          </div>
-          <div class="book-page page-right">
-            <h3>Conseil de développement</h3>
-            <blockquote class="book-quote">
-              « La vraie force est de pouvoir montrer sa vulnérabilité. »
-              <cite>— Brené Brown</cite>
-            </blockquote>
-            <h3>En relation avec les autres</h3>
-            <p>Le Chef-puissant gagne à révéler sa douceur intérieure. Sa force devient encore plus inspirante quand elle s'accompagne de tendresse.</p>
-            <h3>Chemin d'évolution</h3>
-            <p>Vers le <strong>Type 2</strong> : générosité et connexion. Intégrer les qualités du <strong>Type 5</strong> : réflexion et recul.</p>
-            <div class="page-number">4</div>
-          </div>
+        <div class="fiche-type-center">
+          Plutôt géré par les actions / colère
         </div>
 
-        <div class="book-page-turn">
-          <div class="page-turn-front">
-            <div class="fiche-type-illustration"><img src="../images/Type-8-le-lion.png" alt="Le lion"></div>
-            <div class="animal-name">Le Lion</div>
-            <div class="page-hint">Cliquez pour tourner la page</div>
-          </div>
-          <div class="page-turn-back">
-            <h3>Forces et qualités</h3>
-            <ul class="qualities-list">
-              <li><strong>Leadership</strong> - Capacité naturelle à diriger et inspirer</li>
-              <li><strong>Protection</strong> - Défend les personnes vulnérables avec force</li>
-              <li><strong>Franchise</strong> - Dit les choses comme elles sont</li>
-              <li><strong>Détermination</strong> - Ne recule devant rien pour atteindre ses buts</li>
-            </ul>
-            <h3>Défis à surmonter</h3>
-            <ul class="challenges-list">
-              <li>Montrer sa vulnérabilité et sa tendresse</li>
-              <li>Modérer l'intensité de ses réactions</li>
-              <li>Laisser les autres prendre les commandes</li>
-            </ul>
-            <div class="page-hint">Cliquez pour revenir</div>
-          </div>
+        <div class="fiche-type-traits">
+          <ul>
+            <li>Leadership</li>
+            <li>Protection</li>
+            <li>Confiance</li>
+          </ul>
+        </div>
+
+        <div class="fiche-type-baseline">
+          « Le pouvoir et la protection »
         </div>
       </div>
-      <div class="book-nav">
-        <button class="book-nav-btn prev" onclick="turnPage('prev')" disabled>← Pages 1-2</button>
-        <span class="book-nav-indicator">Pages <span id="current-pages">1-2</span></span>
-        <button class="book-nav-btn next" onclick="turnPage('next')">Pages 3-4 →</button>
+
+      <div class="fiche-type-right">
+        <div class="fiche-type-illustration">
+          <img src="../images/Type-8-le-lion.png" alt="Le Lion">
+        </div>
+        <p class="animal-name">Le Lion</p>
       </div>
     </div>
   </section>
@@ -231,22 +173,9 @@
 </footer>
 
 <script>
-function toggleMenu() { document.getElementById('main-nav').classList.toggle('active'); }
-let currentPage = 1;
-const book = document.querySelector('.book');
-const pageTurn = document.querySelector('.book-page-turn');
-const prevBtn = document.querySelector('.book-nav-btn.prev');
-const nextBtn = document.querySelector('.book-nav-btn.next');
-const pageIndicator = document.getElementById('current-pages');
-function turnPage(direction) {
-  if (direction === 'next' && currentPage === 1) { book.classList.add('turned'); currentPage = 3; updateNavigation(); }
-  else if (direction === 'prev' && currentPage === 3) { book.classList.remove('turned'); currentPage = 1; updateNavigation(); }
+function toggleMenu() {
+  document.getElementById('main-nav').classList.toggle('active');
 }
-function updateNavigation() {
-  if (currentPage === 1) { prevBtn.disabled = true; nextBtn.disabled = false; pageIndicator.textContent = '1-2'; }
-  else { prevBtn.disabled = false; nextBtn.disabled = true; pageIndicator.textContent = '3-4'; }
-}
-pageTurn.addEventListener('click', function() { if (currentPage === 1) { turnPage('next'); } else { turnPage('prev'); } });
 </script>
 </body>
 </html>

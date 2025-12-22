@@ -63,104 +63,46 @@
     <p class="lead">La connaissance et l'observation</p>
   </div>
 
-  <!-- Livre interactif -->
+  <!-- Fiche Type visuelle -->
   <section>
-    <div class="book-container">
-      <div class="book center-mental">
-        <div class="book-pages pages-1-2">
-          <div class="book-page page-left">
-            <div class="fiche-type-header">
-              <span class="fiche-type-number">5</span>
-              <div class="fiche-type-title">
-                <h2>L'Expert-observateur</h2>
-                <div class="fiche-type-keywords">
-                  <span>analytique</span>
-                  <span>•</span>
-                  <span>discret</span>
-                  <span>•</span>
-                  <span>observateur</span>
-                </div>
-              </div>
+    <div class="fiche-type center-mental">
+      <div class="fiche-type-left">
+        <div class="fiche-type-header">
+          <span class="fiche-type-number">5</span>
+          <div class="fiche-type-title">
+            <h2>L'Expert-observateur</h2>
+            <div class="fiche-type-keywords">
+              <span>analytique</span>
+              <span>•</span>
+              <span>discret</span>
+              <span>•</span>
+              <span>observateur</span>
             </div>
-            <div class="fiche-type-center">Plutôt géré par la mentalisation / peur</div>
-            <div class="fiche-type-traits">
-              <ul>
-                <li>Expertise</li>
-                <li>Observation</li>
-                <li>Analyse</li>
-              </ul>
-            </div>
-            <div class="fiche-type-baseline">« La connaissance et l'observation »</div>
-            <div class="page-number">1</div>
-          </div>
-          <div class="book-page page-right">
-            <div class="fiche-type-illustration">
-              <img src="../images/Type-5-le-hibou.png" alt="Le hibou">
-            </div>
-            <div class="animal-name">Le Hibou</div>
-            <div class="page-number">2</div>
           </div>
         </div>
 
-        <div class="book-pages pages-3-4">
-          <div class="book-page page-left">
-            <h3>Forces et qualités</h3>
-            <ul class="qualities-list">
-              <li><strong>Expertise</strong> - Maîtrise approfondie de ses domaines d'intérêt</li>
-              <li><strong>Objectivité</strong> - Analyse les situations sans se laisser emporter</li>
-              <li><strong>Autonomie</strong> - Capable de fonctionner seul efficacement</li>
-              <li><strong>Perspicacité</strong> - Voit ce que d'autres ne perçoivent pas</li>
-            </ul>
-            <h3>Défis à surmonter</h3>
-            <ul class="challenges-list">
-              <li>S'engager émotionnellement avec les autres</li>
-              <li>Passer de l'observation à l'action</li>
-              <li>Partager ses connaissances généreusement</li>
-            </ul>
-            <div class="page-number">3</div>
-          </div>
-          <div class="book-page page-right">
-            <h3>Conseil de développement</h3>
-            <blockquote class="book-quote">
-              « La connaissance parle, mais la sagesse écoute. »
-              <cite>— Jimi Hendrix</cite>
-            </blockquote>
-            <h3>En relation avec les autres</h3>
-            <p>L'Expert-observateur gagne à s'impliquer davantage. En partageant non seulement son savoir mais aussi ses émotions, il enrichit ses relations.</p>
-            <h3>Chemin d'évolution</h3>
-            <p>Vers le <strong>Type 8</strong> : confiance et engagement. Intégrer les qualités du <strong>Type 7</strong> : enthousiasme et ouverture.</p>
-            <div class="page-number">4</div>
-          </div>
+        <div class="fiche-type-center">
+          Plutôt géré par la mentalisation / peur
         </div>
 
-        <div class="book-page-turn">
-          <div class="page-turn-front">
-            <div class="fiche-type-illustration"><img src="../images/Type-5-le-hibou.png" alt="Le hibou"></div>
-            <div class="animal-name">Le Hibou</div>
-            <div class="page-hint">Cliquez pour tourner la page</div>
-          </div>
-          <div class="page-turn-back">
-            <h3>Forces et qualités</h3>
-            <ul class="qualities-list">
-              <li><strong>Expertise</strong> - Maîtrise approfondie de ses domaines d'intérêt</li>
-              <li><strong>Objectivité</strong> - Analyse les situations sans se laisser emporter</li>
-              <li><strong>Autonomie</strong> - Capable de fonctionner seul efficacement</li>
-              <li><strong>Perspicacité</strong> - Voit ce que d'autres ne perçoivent pas</li>
-            </ul>
-            <h3>Défis à surmonter</h3>
-            <ul class="challenges-list">
-              <li>S'engager émotionnellement avec les autres</li>
-              <li>Passer de l'observation à l'action</li>
-              <li>Partager ses connaissances généreusement</li>
-            </ul>
-            <div class="page-hint">Cliquez pour revenir</div>
-          </div>
+        <div class="fiche-type-traits">
+          <ul>
+            <li>Expertise</li>
+            <li>Observation</li>
+            <li>Analyse</li>
+          </ul>
+        </div>
+
+        <div class="fiche-type-baseline">
+          « La connaissance et l'observation »
         </div>
       </div>
-      <div class="book-nav">
-        <button class="book-nav-btn prev" onclick="turnPage('prev')" disabled>← Pages 1-2</button>
-        <span class="book-nav-indicator">Pages <span id="current-pages">1-2</span></span>
-        <button class="book-nav-btn next" onclick="turnPage('next')">Pages 3-4 →</button>
+
+      <div class="fiche-type-right">
+        <div class="fiche-type-illustration">
+          <img src="../images/Type-5-le-hibou.png" alt="Le Hibou">
+        </div>
+        <p class="animal-name">Le Hibou</p>
       </div>
     </div>
   </section>
@@ -231,22 +173,9 @@
 </footer>
 
 <script>
-function toggleMenu() { document.getElementById('main-nav').classList.toggle('active'); }
-let currentPage = 1;
-const book = document.querySelector('.book');
-const pageTurn = document.querySelector('.book-page-turn');
-const prevBtn = document.querySelector('.book-nav-btn.prev');
-const nextBtn = document.querySelector('.book-nav-btn.next');
-const pageIndicator = document.getElementById('current-pages');
-function turnPage(direction) {
-  if (direction === 'next' && currentPage === 1) { book.classList.add('turned'); currentPage = 3; updateNavigation(); }
-  else if (direction === 'prev' && currentPage === 3) { book.classList.remove('turned'); currentPage = 1; updateNavigation(); }
+function toggleMenu() {
+  document.getElementById('main-nav').classList.toggle('active');
 }
-function updateNavigation() {
-  if (currentPage === 1) { prevBtn.disabled = true; nextBtn.disabled = false; pageIndicator.textContent = '1-2'; }
-  else { prevBtn.disabled = false; nextBtn.disabled = true; pageIndicator.textContent = '3-4'; }
-}
-pageTurn.addEventListener('click', function() { if (currentPage === 1) { turnPage('next'); } else { turnPage('prev'); } });
 </script>
 </body>
 </html>

@@ -36,6 +36,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Compensation pour les ancres avec header sticky */
+[id] {
+  scroll-margin-top: 120px;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.7;
@@ -475,6 +480,44 @@ section {
   color: var(--center-mental);
 }
 
+/* Cartes avec animal totem */
+.type-card-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.type-card-animal {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 8px;
+  padding: 0.25rem;
+  background: rgba(255,255,255,0.5);
+  transition: transform 0.3s ease;
+}
+
+.type-card:hover .type-card-animal {
+  transform: scale(1.1);
+}
+
+.type-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.type-card-info h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.type-card-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
 
 /* ===== PAGES PROFIL INDIVIDUEL ===== */
 .center-label {
@@ -549,18 +592,39 @@ section {
 .fiche-type {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 0;
   background: var(--bg);
-  border-radius: 16px;
+  border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 10px 40px var(--shadow);
   margin-bottom: 3rem;
+  position: relative;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Effet reliure centrale */
+.fiche-type::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 16px;
+  transform: translateX(-50%);
+  background: linear-gradient(to right,
+    rgba(0,0,0,0.06) 0%,
+    rgba(0,0,0,0.12) 40%,
+    rgba(0,0,0,0.15) 50%,
+    rgba(0,0,0,0.12) 60%,
+    rgba(0,0,0,0.06) 100%);
+  z-index: 10;
+  pointer-events: none;
 }
 
 .fiche-type-left {
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
+  background: #fff;
 }
 
 .fiche-type-header {
@@ -646,20 +710,22 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 2rem;
   position: relative;
+  height: 600px;
 }
 
 .fiche-type-illustration {
-  max-width: 200px;
-  max-height: 200px;
-  margin-bottom: 1.5rem;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .fiche-type-illustration img {
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
 }
 
@@ -729,6 +795,267 @@ section {
 }
 .fiche-type.center-mental .fiche-type-traits li::before { color: var(--center-mental); }
 .fiche-type.center-mental .fiche-type-right { background: var(--center-mental-light); }
+
+/* ===== LIVRE INTERACTIF ===== */
+.book-container {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+}
+
+.book {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  perspective: 2000px;
+}
+
+.book-pages {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.book-pages::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 16px;
+  transform: translateX(-50%);
+  background: linear-gradient(to right,
+    rgba(0,0,0,0.06) 0%,
+    rgba(0,0,0,0.12) 40%,
+    rgba(0,0,0,0.15) 50%,
+    rgba(0,0,0,0.12) 60%,
+    rgba(0,0,0,0.06) 100%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.pages-1-2 {
+  z-index: 1;
+}
+
+.pages-3-4 {
+  z-index: 0;
+}
+
+.book-page {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.book-page.page-left {
+  background: #fff;
+}
+
+.book-page.page-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 2rem;
+}
+
+/* Couleurs selon le centre */
+.book.center-action .page-right { background: var(--center-action-light); }
+.book.center-emotion .page-right { background: var(--center-emotion-light); }
+.book.center-mental .page-right { background: var(--center-mental-light); }
+
+.book.center-action .fiche-type-number,
+.book.center-action .fiche-type-title h2,
+.book.center-action h3 { color: var(--center-action); }
+.book.center-emotion .fiche-type-number,
+.book.center-emotion .fiche-type-title h2,
+.book.center-emotion h3 { color: var(--center-emotion); }
+.book.center-mental .fiche-type-number,
+.book.center-mental .fiche-type-title h2,
+.book.center-mental h3 { color: var(--center-mental); }
+
+.book.center-action .fiche-type-center { background: var(--center-action); color: white; }
+.book.center-emotion .fiche-type-center { background: var(--center-emotion); color: white; }
+.book.center-mental .fiche-type-center { background: var(--center-mental); color: white; }
+
+/* Page qui tourne */
+.book-page-turn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+  z-index: 5;
+  cursor: pointer;
+}
+
+.book-page-turn:hover {
+  transform: rotateY(-15deg);
+}
+
+.book.turned .book-page-turn {
+  transform: rotateY(-180deg);
+}
+
+.page-turn-front,
+.page-turn-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 0 6px 6px 0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.page-turn-front {
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 1.5rem;
+}
+
+.book.center-action .page-turn-front { background: var(--center-action-light); }
+.book.center-emotion .page-turn-front { background: var(--center-emotion-light); }
+.book.center-mental .page-turn-front { background: var(--center-mental-light); }
+
+.page-turn-back {
+  background: #fff;
+  transform: rotateY(180deg);
+  box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+}
+
+/* Numéro de page */
+.page-number {
+  position: absolute;
+  bottom: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.page-left .page-number { left: 2rem; }
+.page-right .page-number { right: 2rem; }
+
+/* Nom de l'animal */
+.animal-name {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Indication pour tourner */
+.page-hint {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.book-page-turn:hover .page-hint {
+  opacity: 1;
+}
+
+/* Contenu pages 3-4 */
+.book-page h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.book-page h3:not(:first-child) {
+  margin-top: 0.8rem;
+}
+
+.qualities-list,
+.challenges-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.qualities-list li,
+.challenges-list li {
+  padding: 0.25rem 0;
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+
+.book-quote {
+  background: var(--bg-warm);
+  padding: 0.8rem;
+  border-left: 3px solid var(--secondary);
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.book-quote cite {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+.book-page p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+/* Navigation du livre */
+.book-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.book-nav-btn {
+  padding: 0.6rem 1.2rem;
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.book-nav-btn:hover:not(:disabled) {
+  background: var(--primary);
+  color: white;
+}
+
+.book-nav-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.book-nav-indicator {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
 
 /* Responsive fiche type */
 @media (max-width: 768px) {
@@ -930,6 +1257,9 @@ section {
   border-radius: 16px;
   overflow: hidden;
   transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .formation-card:hover {
@@ -942,27 +1272,47 @@ section {
   color: white;
   padding: 1.5rem 2rem;
   text-align: center;
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .formation-card .card-header h3 {
   color: white;
   margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
 }
 
 .formation-card .card-header .level {
   opacity: 0.8;
   font-size: 0.9rem;
+  margin-bottom: 0.5rem;
 }
 
 .formation-card .card-body {
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.formation-card .card-body > p {
+  height: 5rem;
+}
+
+.formation-card .card-body .btn {
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .formation-card .dates {
-  background: var(--bg-warm);
+  background: #F0E4C8;
   padding: 1rem;
   border-radius: 8px;
   margin-bottom: 1.5rem;
+  height: 100px;
 }
 
 .formation-card .dates h4 {
@@ -973,6 +1323,12 @@ section {
 .pricing-table {
   width: 100%;
   margin: 1.5rem 0;
+  height: 180px;
+  vertical-align: top;
+}
+
+.pricing-table tbody {
+  vertical-align: top;
 }
 
 .pricing-table tr {

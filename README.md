@@ -70,9 +70,14 @@ cef-site/
 
 | Centre | Couleur | Types |
 |--------|---------|-------|
-| Action (Colère) | Rouge `#c0392b` | 8, 9, 1 |
-| Émotion (Reconnaissance) | Orange `#d35400` | 2, 3, 4 |
-| Mental (Peur) | Bleu `#2980b9` | 5, 6, 7 |
+| Action (Colère) | Bordeaux `#6B3A3A` | 8, 9, 1 |
+| Émotion (Reconnaissance) | Bronze `#8C7853` | 2, 3, 4 |
+| Mental (Peur) | Pétrole `#4A6670` | 5, 6, 7 |
+
+Ces couleurs sont appliquées sur :
+- Les cartes des 9 types (bordure + badge)
+- Les cartes des 3 centres (icône + titre)
+- Les pages de profil individuel (badge centre, titres, encadrés, keywords)
 
 ### Composants UI
 

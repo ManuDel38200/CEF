@@ -1108,12 +1108,14 @@ section {
     grid-template-columns: 1fr;
   }
 
-  .fiche-type-right {
-    padding: 2rem 1.5rem;
+  .fiche-type-left {
+    order: 1;
+    padding: 1.5rem;
   }
 
-  .fiche-type-left {
-    padding: 1.5rem;
+  .fiche-type-right {
+    order: 2;
+    padding: 2rem 1.5rem;
   }
 
   .fiche-type-number {

@@ -664,24 +664,6 @@ section {
   box-shadow: 0 8px 30px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08);
 }
 
-/* Effet reliure centrale */
-.fiche-type::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 16px;
-  transform: translateX(-50%);
-  background: linear-gradient(to right,
-    rgba(0,0,0,0.06) 0%,
-    rgba(0,0,0,0.12) 40%,
-    rgba(0,0,0,0.15) 50%,
-    rgba(0,0,0,0.12) 60%,
-    rgba(0,0,0,0.06) 100%);
-  z-index: 10;
-  pointer-events: none;
-}
 
 .fiche-type-left {
   padding: 2.5rem;

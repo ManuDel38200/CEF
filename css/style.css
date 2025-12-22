@@ -204,10 +204,13 @@ nav a.active {
 
 /* ===== HERO SECTION ===== */
 .hero {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  background:
+    linear-gradient(135deg, rgba(46, 90, 136, 0.85) 0%, rgba(74, 123, 167, 0.8) 100%),
+    url('../images/IMG_061035_leve-soleil.jpg') center 60% / cover no-repeat;
   color: white;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   text-align: center;
+  position: relative;
 }
 
 .hero-content {
@@ -219,6 +222,8 @@ nav a.active {
   font-size: 2.75rem;
   margin-bottom: 1rem;
   font-weight: 700;
+  color: var(--secondary);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
 .hero .subtitle {
@@ -359,6 +364,61 @@ section {
 .section-title p {
   color: var(--text-light);
   font-size: 1.1rem;
+}
+
+/* Section intro avec symbole */
+.intro-with-symbol {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  background: var(--bg-light);
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.intro-with-symbol .intro-text {
+  flex: 1;
+}
+
+.intro-with-symbol .intro-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.intro-with-symbol .intro-text ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.intro-with-symbol .intro-text li {
+  margin-bottom: 0.75rem;
+}
+
+.intro-with-symbol .intro-symbol {
+  flex-shrink: 0;
+}
+
+.intro-with-symbol .intro-symbol img {
+  max-width: 280px;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .intro-with-symbol {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-with-symbol .intro-text ul {
+    text-align: left;
+  }
+
+  .intro-with-symbol .intro-symbol img {
+    max-width: 200px;
+  }
 }
 
 .highlight-box {
@@ -1413,6 +1473,37 @@ section {
 
 .contact-item h4 {
   margin-bottom: 0.5rem;
+}
+
+/* ===== MENTIONS LEGALES - Informations manquantes ===== */
+.info-manquante {
+  background: linear-gradient(90deg, #fff3cd, #ffeeba);
+  border-left: 4px solid #ffc107;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 0 6px 6px 0;
+  font-style: italic;
+}
+
+.info-manquante strong {
+  color: #856404;
+}
+
+.info-manquante-titre {
+  background: linear-gradient(90deg, #fff3cd, #ffeeba);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.info-manquante-note {
+  background: #f8f9fa;
+  border-left: 4px solid #6c757d;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.9rem;
+  color: var(--text-light);
 }
 
 /* ===== FOOTER ===== */

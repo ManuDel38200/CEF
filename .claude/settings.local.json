@@ -5,7 +5,11 @@
       "Bash(gh auth status:*)",
       "Bash(gh repo create:*)",
       "Bash(git remote:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit - Site Centre Ennéagramme France\n\n- Pages principales \\(accueil, à propos, contact, mentions légales\\)\n- Section Ennéagramme \\(définition, origines, 3 centres\\)\n- 9 types de personnalité détaillés\n- Formations \\(3 niveaux + entreprise\\)\n- Feuille de style CSS responsive\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(node -e:*)",
+      "Bash(git commit:*)"
     ]
   }
 }

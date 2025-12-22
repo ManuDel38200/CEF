@@ -71,7 +71,7 @@ header {
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 0.6rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -112,7 +112,7 @@ nav > ul > li {
 
 nav a {
   display: block;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 0.85rem;
   color: var(--text);
   font-weight: 500;
   border-radius: 6px;
@@ -754,6 +754,58 @@ section {
   }
 }
 
+/* ===== BLOC CTA COMMUN (fin de pages profils) ===== */
+.cta-decouvrir {
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-warm) 100%);
+  border-radius: 16px;
+  padding: 2.5rem;
+  margin-top: 3rem;
+  text-align: center;
+  border: 1px solid var(--border-light);
+}
+
+.cta-decouvrir h2 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.cta-decouvrir p {
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  color: var(--text-light);
+}
+
+.cta-decouvrir .btn-group {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Boutons plus sobres dans le CTA */
+.cta-decouvrir .btn {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.cta-decouvrir .btn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.cta-decouvrir .btn-secondary {
+  background: transparent;
+  border: 2px solid var(--text-light);
+  color: var(--text-light);
+}
+
+.cta-decouvrir .btn-secondary:hover {
+  background: var(--text-light);
+  color: white;
+}
+
 /* ===== TESTIMONIALS ===== */
 .testimonial {
   background: var(--bg-light);
@@ -1009,9 +1061,9 @@ section {
 
 /* ===== FOOTER ===== */
 footer {
-  background: var(--primary-dark);
-  color: white;
-  padding: 4rem 2rem 1.5rem;
+  background: #5a6270;
+  color: rgba(255,255,255,0.9);
+  padding: 2.5rem 2rem 1rem;
   margin-top: 4rem;
 }
 
@@ -1020,26 +1072,28 @@ footer {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 3rem;
+  gap: 2rem;
 }
 
 footer h4 {
-  color: var(--secondary);
-  margin-bottom: 1.25rem;
-  font-size: 1.1rem;
+  color: #d4a84b;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
 }
 
 footer p {
-  opacity: 0.85;
+  opacity: 0.8;
   font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 footer a {
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.7);
+  transition: color 0.2s;
 }
 
 footer a:hover {
-  color: white;
+  color: rgba(255,255,255,0.95);
 }
 
 footer ul {
@@ -1053,15 +1107,15 @@ footer li {
 
 .footer-bottom {
   max-width: 1200px;
-  margin: 3rem auto 0;
-  padding-top: 1.5rem;
+  margin: 1.5rem auto 0;
+  padding-top: 1rem;
   border-top: 1px solid rgba(255,255,255,0.15);
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   opacity: 0.75;
 }
 

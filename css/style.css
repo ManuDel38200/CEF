@@ -311,6 +311,16 @@ main {
   margin-bottom: 1rem;
 }
 
+.page-header h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: var(--secondary);
+  margin: 0.8rem auto 0;
+  border-radius: 2px;
+}
+
 .page-header .lead {
   font-size: 1.2rem;
   color: var(--text-light);
@@ -609,6 +619,9 @@ section {
   color: var(--center-mental);
 }
 
+
+/* Désactiver le trait or sur les pages profils (charte spécifique) */
+.profile-page .page-header h1::after { display: none; }
 
 .profile-page.center-action .page-header h1 { color: var(--center-action); }
 .profile-page.center-action .highlight-box { 

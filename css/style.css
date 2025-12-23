@@ -350,6 +350,27 @@ li {
   margin-bottom: 0.5rem;
 }
 
+/* Bloc texte + image côte à côte */
+.content-with-image {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.content-with-image .content-text {
+  flex: 1;
+}
+
+.content-with-image .content-image {
+  flex-shrink: 0;
+  width: 250px;
+}
+
+.content-with-image .content-image img {
+  width: 100%;
+  height: auto;
+}
+
 blockquote {
   border-left: 4px solid var(--secondary);
   padding: 1rem 1.5rem;
@@ -1683,6 +1704,15 @@ footer li {
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+  }
+
+  .content-with-image {
+    flex-direction: column;
+  }
+
+  .content-with-image .content-image {
+    width: 200px;
+    margin: 0 auto;
   }
 }
 

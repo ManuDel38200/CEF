@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="200" height="150">
+  <!-- Escalier 3 marches montant vers la droite -->
+
+  <!-- Marche 1 (bas) -->
+  <rect x="10" y="110" width="60" height="30" fill="#2E5A88" rx="3"/>
+
+  <!-- Marche 2 (milieu) -->
+  <rect x="70" y="70" width="60" height="70" fill="#4A7BA7" rx="3"/>
+
+  <!-- Marche 3 (haut) -->
+  <rect x="130" y="30" width="60" height="110" fill="#2E5A88" rx="3"/>
+
+  <!-- Accent doré sur le dessus des marches -->
+  <rect x="10" y="110" width="60" height="4" fill="#E8B44B" rx="2"/>
+  <rect x="70" y="70" width="60" height="4" fill="#E8B44B" rx="2"/>
+  <rect x="130" y="30" width="60" height="4" fill="#E8B44B" rx="2"/>
+</svg>

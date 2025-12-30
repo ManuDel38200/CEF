@@ -1213,6 +1213,44 @@ section {
   color: white;
 }
 
+/* ===== SECTION FORMATEUR (page À propos) ===== */
+.formateur-intro {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.photo-formateur {
+  width: 450px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px var(--shadow);
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.formateur-texte {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .formateur-intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .photo-formateur {
+    width: 180px;
+    margin-bottom: 1rem;
+  }
+
+  .formateur-texte {
+    text-align: left;
+  }
+}
+
 /* ===== TESTIMONIALS ===== */
 .testimonial {
   background: var(--bg-light);

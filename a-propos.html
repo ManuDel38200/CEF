@@ -19,9 +19,8 @@
       <ul>
         <li><a href="index.html">Accueil</a></li>
         <li class="dropdown">
-          <a href="enneagramme/index.html">L'Ennéagramme</a>
+          <a href="enneagramme/definition-symbole.html">L'Ennéagramme</a>
           <div class="dropdown-content">
-            <a href="enneagramme/definition-symbole.html">Qu'est-ce que l'Ennéagramme ?</a>
             <a href="enneagramme/origine-histoire.html">Origine et histoire</a>
           </div>
         </li>
@@ -62,10 +61,13 @@
     <p class="lead">Centre de formation dédié à l'apprentissage, à la compréhension et à la transmission de l'Ennéagramme.</p>
   </div>
 
-  <section>
+  <section class="formateur-section">
     <h2>Laurent GARDEY – Votre formateur</h2>
 
-    <p><strong>Parmi mes passions :</strong> la nature, l'écriture, l'éducation, la formation et les voyages. J'aime aussi partager du temps en famille et avec mes amis. J'aime m'épanouir et progresser autant dans le corps que dans l'esprit.</p>
+    <div class="formateur-intro">
+      <img src="images/Laurent Gardey.jpg" alt="Laurent Gardey, formateur en Ennéagramme" class="photo-formateur">
+      <div class="formateur-texte">
+        <p><strong>Parmi mes passions :</strong> la nature, l'écriture, l'éducation, la formation et les voyages. J'aime aussi partager du temps en famille et avec mes amis. J'aime m'épanouir et progresser autant dans le corps que dans l'esprit.</p>
 
     <p><strong>Mieux me connaître :</strong> formateur en développement personnel et spécialisé dans l'Ennéagramme. Depuis 2020, j'ai plaisir à animer des formations consacrées à la connaissance de soi et à la compréhension de l'humain, que ce soit dans les relations personnelles, professionnelles ou familiales. J'accompagne des particuliers et des professionnels dans leur découverte de ce modèle remarquable qu'est l'Ennéagramme.</p>
 
@@ -74,6 +76,8 @@
     <p><strong>Parmi mes métiers :</strong> technicien en bureau d'étude, enseignant, formateur, musicien et étudiant…</p>
 
     <p><strong>Ce qui m'inspire :</strong> l'amour, la paix, l'équilibre et l'harmonie.</p>
+      </div>
+    </div>
 
     <h3>Qualifications : Diplômes et formations</h3>
     <ul>
@@ -131,7 +135,7 @@
       <h4>Navigation</h4>
       <ul>
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="enneagramme/index.html">L'Ennéagramme</a></li>
+        <li><a href="enneagramme/definition-symbole.html">L'Ennéagramme</a></li>
         <li><a href="types-enneagramme/index.html">Les 9 profils</a></li>
         <li><a href="formations-enneagramme/index.html">Formations</a></li>
       </ul>
@@ -142,18 +146,28 @@
         <li><a href="a-propos.html">À propos du CEF</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="mentions-legales.html">Mentions légales</a></li>
+        <li><a href="politique-confidentialite.html">Confidentialité</a></li>
       </ul>
+    </div>
+    <div>
+      <h4>Nous suivre</h4>
+      <div class="social-links">
+        <a href="https://www.facebook.com/cefenneagramme" title="Facebook">FB</a>
+        <a href="https://linkedin.com/in/laurent-gardey-formateur-en-développement-personnel-67ab55192" title="LinkedIn">IN</a>
+      </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2021-2025 Centre Ennéagramme France (CEF)</p>
+    <p>© 2021-2025 Centre Ennéagramme France (CEF) - Tous droits réservés</p>
   </div>
 </footer>
 
 <script>
 function toggleMenu() {
-  document.getElementById('main-nav').classList.toggle('active');
+  const nav = document.getElementById('main-nav');
+  if (nav) nav.classList.toggle('active');
 }
 </script>
+
 </body>
 </html>

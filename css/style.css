@@ -1426,6 +1426,66 @@ section {
 }
 
 /* ===== CENTRES (3 centres) ===== */
+/* ===== HISTORY PAGE (page origine-histoire) ===== */
+.history-page section {
+  margin-bottom: 5rem;
+}
+
+.history-page h3 {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.history-page h3:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.history-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 2rem 0 3rem 0;
+}
+
+.history-card {
+  background: var(--bg);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.history-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px var(--shadow);
+}
+
+.history-card h4 {
+  color: var(--primary);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.history-card p {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.history-card p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .history-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== CENTRES (3 centres) ===== */
 .centre-card {
   text-align: center;
   padding: 2.5rem 2rem;

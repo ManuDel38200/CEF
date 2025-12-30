@@ -19,9 +19,8 @@
       <ul>
         <li><a href="index.html">Accueil</a></li>
         <li class="dropdown">
-          <a href="enneagramme/index.html">L'Ennéagramme</a>
+          <a href="enneagramme/definition-symbole.html">L'Ennéagramme</a>
           <div class="dropdown-content">
-            <a href="enneagramme/definition-symbole.html">Qu'est-ce que l'Ennéagramme ?</a>
             <a href="enneagramme/origine-histoire.html">Origine et histoire</a>
           </div>
         </li>
@@ -94,7 +93,7 @@
       <h4>Navigation</h4>
       <ul>
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="enneagramme/index.html">L'Ennéagramme</a></li>
+        <li><a href="enneagramme/definition-symbole.html">L'Ennéagramme</a></li>
         <li><a href="types-enneagramme/index.html">Les 9 profils</a></li>
         <li><a href="formations-enneagramme/index.html">Formations</a></li>
       </ul>
@@ -105,18 +104,40 @@
         <li><a href="a-propos.html">À propos du CEF</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="mentions-legales.html">Mentions légales</a></li>
+        <li><a href="politique-confidentialite.html">Confidentialité</a></li>
       </ul>
+    </div>
+    <div>
+      <h4>Nous suivre</h4>
+      <div class="social-links">
+        <a href="https://www.facebook.com/cefenneagramme" title="Facebook">FB</a>
+        <a href="https://linkedin.com/in/laurent-gardey-formateur-en-développement-personnel-67ab55192" title="LinkedIn">IN</a>
+      </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2021-2025 Centre Ennéagramme France (CEF)</p>
+    <p>© 2021-2025 Centre Ennéagramme France (CEF) - Tous droits réservés</p>
   </div>
 </footer>
 
 <script>
 function toggleMenu() {
-  document.getElementById('main-nav').classList.toggle('active');
+  const nav = document.getElementById('main-nav');
+  if (nav) nav.classList.toggle('active');
 }
+
+// Gestion des dropdowns en mobile
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.innerWidth <= 768) {
+    document.querySelectorAll('.dropdown > a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        this.parentElement.classList.toggle('open');
+      });
+    });
+  }
+});
 </script>
+
 </body>
 </html>

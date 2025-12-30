@@ -1763,7 +1763,24 @@ footer li {
     box-shadow: none;
     border: none;
     padding-left: 1rem;
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .dropdown.open .dropdown-content {
     display: block;
+    max-height: 500px;
+  }
+
+  .dropdown > a::after {
+    content: " ▼";
+    font-size: 0.7rem;
+  }
+
+  .dropdown.open > a::after {
+    content: " ▲";
   }
   
   .hero {
